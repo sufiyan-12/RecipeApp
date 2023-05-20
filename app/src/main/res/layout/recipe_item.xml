@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    android:background="@color/white"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/recipe_item_image"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_height="300dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:scaleType="centerCrop"
+            />
+
+
+        <ImageButton
+            android:id="@+id/recipe_item_favorite_IB"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_favorite"
+            android:backgroundTint="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/recipe_item_bottom_layout"
+            android:background="#FAFAFA"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:padding="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/recipe_item_name"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentBottom="true"
+                android:text="Hot Chicken"
+                android:maxLength="40"
+                android:ellipsize="end"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1C1C1C"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/recipe_add_meal_btn"
+                android:layout_marginEnd="20dp"
+                android:padding="12dp"
+                android:background="@drawable/ic_add_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/recipe_item_category"
+            android:gravity="center"
+            android:textColor="#393939"
+            android:text="Category"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/category_background"
+            android:layout_width="wrap_content"
+            android:minWidth="85dp"
+            android:layout_height="32dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
